@@ -30,13 +30,14 @@ Park.prototype.mostPopular = function(){
 };
 // Find all dinosaurs of a particular species
 Park.prototype.matchesSpecies = function(species){
-	let speciesMatches = [];
-	for (dinosaur of this.dinosaurs){
-		if (dinosaur.species == species){
-			speciesMatches.push(dinosaur)
-		}
-	}
-	return speciesMatches
+	// let speciesMatches = [];
+	// for (dinosaur of this.dinosaurs){
+	// 	if (dinosaur.species == species){
+	// 		speciesMatches.push(dinosaur)
+	// 	}
+	// }
+	// return speciesMatches
+	return this.dinosaurs.filter(dino => dino.species == species)
 }
 // Calculate the total number of visitors per day
 Park.prototype.visitorsPerDay = function(total = 0){
