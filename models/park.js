@@ -67,28 +67,38 @@ Park.prototype.removeSpecies = function(species){
 }
 // return summary of diet type and number of it in record.
 Park.prototype.summary = function(){
-	//look through current dinosaurs, if the diet category is new,
-	//make a new category.
-	//for each category, find object that has diet category and +1.
-	dietCategorys = [];
-	appenddiets = [];
-	summary = {};
-	function findDiets(dino){
-		if (!dietCategorys.includes(dino.diet)){
-				dietCategorys.push(dino.diet)
+	// dietCategorys = [];
+	// appenddiets = [];
+	// summary = {};
+	// function findDiets(dino){
+	// 	if (!dietCategorys.includes(dino.diet)){
+	// 			dietCategorys.push(dino.diet)
+	// 	}
+	// }
+	// function dietCount(diet){
+	// 	let count = 0;
+	// 	count = this.dinosaurs.filter(dino => dino.diet == diet).length;
+	// 	return count;
+	// }
+	// this.dinosaurs.forEach(findDiets);
+	// for (category of dietCategorys){
+	// 	summary[category] = dietCount(category);
+	// }
+	// return summary
+	summary = {carnivore:0,herbivore:0,omnivore:0};
+
+	for (dino of this.dinosaurs){
+		switch(dino.diet){
+			case 'carnivore':
+				summary['carnivore'] += 1
+				break;
+			case 'herbivore':
+				summary['herbivore'] += 1
+				break;
+			case 'omnivore':
+				summary['omnivore'] +=1
+				break;
 		}
-	}
-//function counts diet.
-	function dietCount(diet){
-		let count = 0;
-		count = this.dinosaurs.filter(dino => dino.diet == diet).length;
-		return count;
-	}
-//finds different diet categories
-	this.dinosaurs.forEach(findDiets);
-//need to count the diets and assign to new array.
-	for (category of dietCategorys){
-		summary[category] = dietCount(category);
 	}
 	return summary
 }
