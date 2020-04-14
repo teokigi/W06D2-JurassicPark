@@ -40,11 +40,11 @@ describe('Park', function() {
     assert.equal('triceratops',starAttraction.species);
 });
 
-//   it('007 - should be able to find all dinosaurs of a particular species',function(){
-//     const matchingSpecies = jurassicPark.matchesSpecies('Raptor');
-//     assert.equal(1,matchingSpecies.length);
-// });
-//
+  it('007 - should be able to find all dinosaurs of a particular species',function(){
+    const matchingSpecies = jurassicPark.matchesSpecies('Raptor');
+    assert.equal(1,matchingSpecies.length);
+});
+
 //   it('008 - should be able to calculate the total number of visitors per day',function(){
 //     // 50 + 75 = 125 + 125 = 250 + 15 = 265
 //     assert.equal(265,jurassicPark.visitorsPerDay());

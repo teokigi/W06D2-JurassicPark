@@ -28,35 +28,35 @@ Park.prototype.mostPopular = function(){
 	}
 	return mostPopularDino
 };
-// // Find all dinosaurs of a particular species
-// Park.prototype.matchesSpecies = function(species){
-// 	let speciesMatches = [];
-// 	for (dinosaur of this.dinosaurs){
-// 		if (dinosaur.species == species){
-// 			speciesMatches.push(dinosaur)
-// 		}
-// 	}
-// 	return speciesMatches
-// }
-// // Calculate the total number of visitors per day
-// Park.prototype.vistorsPerDay = function(){
-// 	let total = 0;
-// 	for (dinosaur of this.dinosaurs){
-// 		total += dinosaur.guestsAttractedPerDay
-// 	}
-// 	return total;
-// }
-// // Calculate the total number of visitors per year
-// Park.prototype.visitorsPerYear = function(){
-//
-// 	const totalPerDay = this.visitorsPerDay();
-// 	const totalPerYear = totalPerDay*365;
-// 	return totalPerYear
-// }
-// // Calculate the total revenue from ticket sales for one year
-// Park.prototype.annualSales = function(){
-// 	const annualVisits = this.visitorsPerYear();
-// 	const salesTotal = annualVists*this.ticketPrice;
-// 	return salesTotal;
-// }
+// Find all dinosaurs of a particular species
+Park.prototype.matchesSpecies = function(species){
+	let speciesMatches = [];
+	for (dinosaur of this.dinosaurs){
+		if (dinosaur.species == species){
+			speciesMatches.push(dinosaur)
+		}
+	}
+	return speciesMatches
+}
+// Calculate the total number of visitors per day
+Park.prototype.vistorsPerDay = function(){
+	let total = 0;
+	for (dinosaur of this.dinosaurs){
+		total += dinosaur.guestsAttractedPerDay
+	}
+	return total;
+}
+// Calculate the total number of visitors per year
+Park.prototype.visitorsPerYear = function(){
+
+	const totalPerDay = this.visitorsPerDay();
+	const totalPerYear = totalPerDay*365;
+	return totalPerYear
+}
+// Calculate the total revenue from ticket sales for one year
+Park.prototype.annualSales = function(){
+	const annualVisits = this.visitorsPerYear();
+	const salesTotal = annualVists*this.ticketPrice;
+	return salesTotal;
+}
 module.exports = Park;
