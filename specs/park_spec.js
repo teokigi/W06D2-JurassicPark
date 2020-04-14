@@ -16,15 +16,15 @@ describe('Park', function() {
   it('001 - should have a name',function(){
     assert.equal('Jurassic Park',jurassicPark.name);
     });
-//
-//   it('002 - should have a ticket price',function(){
-//     assert.equal(100,jurassicPark.ticketPrice);
-//     });
-//
-//   it('003 - should have a collection of dinosaurs',function(){
-//     assert.deepStrictEqual([dinosaur1,dinosaur2,dinosaur3],JurassicPark.dinosaurs);
-//     });
-//
+
+  it('002 - should have a ticket price',function(){
+    assert.equal(100,jurassicPark.ticketPrice);
+    });
+
+  it('003 - should have a collection of dinosaurs',function(){
+    assert.deepStrictEqual([dinosaur1,dinosaur2,dinosaur3],jurassicPark.dinosaurs);
+    });
+
 //   it('004 - should be able to add a dinosaur to its collection',function(){
 //     jurassicPark.addDinosaur(dinosaur4);
 //     assert.equal(4,jurassicPark.dinosaurs.length);

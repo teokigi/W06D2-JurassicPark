@@ -2,14 +2,14 @@ const Dinosaur = require('./dinosaur.js')
 
 const Park = function (name, ticketprice, dinosaurs) {
   this.name = name;
-  this.ticketprice = ticketprice;
+  this.ticketPrice = ticketprice;
   this.dinosaurs = dinosaurs;
 }
 // Add a dinosaur to its collection of dinosaurs
 Park.prototype.addDinosaur = function(new_dinosaur){
 	this.dinosaurs.push(new_dinosaur);
 }
-// Remove a dinosaur from its collection of dinosaurs
+//Remove a dinosaur from its collection of dinosaurs
 // Park.prototype.removeDinosaur = function(){
 // 	this.dinsoaurs.pop();
 // }
