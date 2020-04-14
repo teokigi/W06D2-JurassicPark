@@ -15,18 +15,10 @@ Park.prototype.removeDinosaur = function(){
 }
 //Find the dinosaur that attracts the most visitors
 Park.prototype.mostPopular = function(){
-	let mostPopularDino
-	for (dinosaur of this.dinosaurs){
-		if (!mostPopularDino){
-			mostPopularDino = dinosaur
-			}
-		else{
-			if (mostPopularDino.guestsAttractedPerDay < dinosaur.guestsAttractedPerDay){
-			mostPopularDino = dinosaur;
-			}
-		}
-	}
-	return mostPopularDino
+	//most popular dinosaur variable
+	let mpd
+	this.dinosaurs.forEach(dino => mpd == null || mpd.guestsAttractedPerDay < dino.guestsAttractedPerDay ? mpd = dino:null)
+	return mpd
 };
 // Find all dinosaurs of a particular species
 Park.prototype.matchesSpecies = function(species){
