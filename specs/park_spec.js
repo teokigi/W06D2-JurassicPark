@@ -25,11 +25,11 @@ describe('Park', function() {
     assert.deepStrictEqual([dinosaur1,dinosaur2,dinosaur3],jurassicPark.dinosaurs);
     });
 
-//   it('004 - should be able to add a dinosaur to its collection',function(){
-//     jurassicPark.addDinosaur(dinosaur4);
-//     assert.equal(4,jurassicPark.dinosaurs.length);
-// });
-//
+  it('004 - should be able to add a dinosaur to its collection',function(){
+    jurassicPark.addDinosaur(dinosaur4);
+    assert.equal(4,jurassicPark.dinosaurs.length);
+});
+
 //   it('005 - should be able to remove a dinosaur from its collection',function(){
 //     jurassicPark.removeDinosaur();
 //     assert.equal(2,jurassicPark.dinosaurs.length);
