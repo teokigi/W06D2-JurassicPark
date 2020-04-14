@@ -10,9 +10,9 @@ Park.prototype.addDinosaur = function(new_dinosaur){
 	this.dinosaurs.push(new_dinosaur);
 }
 //Remove a dinosaur from its collection of dinosaurs
-// Park.prototype.removeDinosaur = function(){
-// 	this.dinsoaurs.pop();
-// }
+Park.prototype.removeDinosaur = function(){
+	this.dinosaurs.pop();
+}
 // Find the dinosaur that attracts the most visitors
 // Park.prototpye.mostPopular = function(){
 // 	let most_popular;

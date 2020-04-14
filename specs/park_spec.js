@@ -30,11 +30,11 @@ describe('Park', function() {
     assert.equal(4,jurassicPark.dinosaurs.length);
 });
 
-//   it('005 - should be able to remove a dinosaur from its collection',function(){
-//     jurassicPark.removeDinosaur();
-//     assert.equal(2,jurassicPark.dinosaurs.length);
-// });
-//
+  it('005 - should be able to remove a dinosaur from its collection',function(){
+    jurassicPark.removeDinosaur();
+    assert.equal(2,jurassicPark.dinosaurs.length);
+});
+
 //   it('006 - should be able to find the dinosaur that attracts the most visitors',function(){
 //     const starAttraction = jurassicPark.mostPopular();
 //     assert.equal('triceratops',starAttraction.species);
