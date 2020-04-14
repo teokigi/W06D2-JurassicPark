@@ -58,4 +58,15 @@ describe('Park', function() {
     assert.equal(250*365*100,jurassicPark.annualSales());
 });
 
+    it('011 - remove all dinosaurs of a particular species',function(){
+    jurassicPark.removeSpecies('Raptor')
+    assert.equal(2,jurassicPark.dinosaurs.length)
+});
+
+//Example: { 'carnivore': 5, 'herbivore': 2, 'omnivore': 1 }
+    it('012 - Provide an object containing each of the diet types \
+        and the number of dinosaurs in the park of that diet type\
+        ',function(){
+        assert.equal({'carnivore': 2,'herbivore':1},jurassicPark.summary())
+});
 });

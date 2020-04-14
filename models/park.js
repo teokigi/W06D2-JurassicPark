@@ -60,4 +60,10 @@ Park.prototype.annualSales = function(){
 	const salesTotal = annualVisits*this.ticketPrice;
 	return salesTotal;
 }
+// remove a particular species
+Park.prototype.removeSpecies = function(species){
+	const found = this.dinosaurs.filter(dino => dino.species != species);
+	this.dinosaurs = found;
+}
+
 module.exports = Park;
