@@ -40,11 +40,11 @@ Park.prototype.matchesSpecies = function(species){
 }
 // Calculate the total number of visitors per day
 Park.prototype.visitorsPerDay = function(){
+// for (dinosaur of this.dinosaurs){
+// 	total += dinosaur.guestsAttractedPerDay
+// }
 	let total = 0;
-	for (dinosaur of this.dinosaurs){
-		total += dinosaur.guestsAttractedPerDay
-	}
-	console.log(total);
+	this.dinosaurs.forEach(dino => total += dino.guestsAttractedPerDay)
 	return total
 }
 // Calculate the total number of visitors per year
