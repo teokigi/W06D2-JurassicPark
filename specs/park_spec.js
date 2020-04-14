@@ -35,11 +35,11 @@ describe('Park', function() {
     assert.equal(2,jurassicPark.dinosaurs.length);
 });
 
-//   it('006 - should be able to find the dinosaur that attracts the most visitors',function(){
-//     const starAttraction = jurassicPark.mostPopular();
-//     assert.equal('triceratops',starAttraction.species);
-// });
-//
+  it('006 - should be able to find the dinosaur that attracts the most visitors',function(){
+    const starAttraction = jurassicPark.mostPopular();
+    assert.equal('triceratops',starAttraction.species);
+});
+
 //   it('007 - should be able to find all dinosaurs of a particular species',function(){
 //     const matchingSpecies = jurassicPark.matchesSpecies('Raptor');
 //     assert.equal(1,matchingSpecies.length);

@@ -13,21 +13,21 @@ Park.prototype.addDinosaur = function(new_dinosaur){
 Park.prototype.removeDinosaur = function(){
 	this.dinosaurs.pop();
 }
-// Find the dinosaur that attracts the most visitors
-// Park.prototpye.mostPopular = function(){
-// 	let most_popular;
-// 	for (dinosaur of this.dinosaurs){
-// 		if (!most_popular){
-// 			most_popular = dinosaur;
-// 			}
-// 		else{
-// 			if (most_popular.guestsAttractedPerDay() < dinosaur.guestsAttractedPerDay()){
-// 			most_popular = dinosaur;
-// 			};
-// 		};
-// 	};
-// 	return most_popular;
-// };
+//Find the dinosaur that attracts the most visitors
+Park.prototype.mostPopular = function(){
+	let mostPopularDino
+	for (dinosaur of this.dinosaurs){
+		if (!mostPopularDino){
+			mostPopularDino = dinosaur
+			}
+		else{
+			if (mostPopularDino.guestsAttractedPerDay < dinosaur.guestsAttractedPerDay){
+			mostPopularDino = dinosaur;
+			}
+		}
+	}
+	return mostPopularDino
+};
 // // Find all dinosaurs of a particular species
 // Park.prototype.matchesSpecies = function(species){
 // 	let speciesMatches = [];
