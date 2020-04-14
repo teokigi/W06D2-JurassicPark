@@ -39,18 +39,19 @@ Park.prototype.matchesSpecies = function(species){
 	return speciesMatches
 }
 // Calculate the total number of visitors per day
-Park.prototype.vistorsPerDay = function(){
+Park.prototype.visitorsPerDay = function(){
 	let total = 0;
 	for (dinosaur of this.dinosaurs){
 		total += dinosaur.guestsAttractedPerDay
 	}
-	return total;
+	console.log(total);
+	return total
 }
 // Calculate the total number of visitors per year
 Park.prototype.visitorsPerYear = function(){
 
 	const totalPerDay = this.visitorsPerDay();
-	const totalPerYear = totalPerDay*365;
+	const totalPerYear = totalPerDay * 365;
 	return totalPerYear
 }
 // Calculate the total revenue from ticket sales for one year

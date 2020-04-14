@@ -45,11 +45,12 @@ describe('Park', function() {
     assert.equal(1,matchingSpecies.length);
 });
 
-//   it('008 - should be able to calculate the total number of visitors per day',function(){
-//     // 50 + 75 = 125 + 125 = 250 + 15 = 265
-//     assert.equal(265,jurassicPark.visitorsPerDay());
-// });
-//
+  it('008 - should be able to calculate the total number of visitors per day',function(){
+    // 50 + 75 = 125 + 125 = 250
+    total = jurassicPark.visitorsPerDay()
+    assert.equal(250,total);
+});
+
 //   it('009 - should be able to calculate the total number of visitors per year',function(){
 //     assert.equal(265*365,jurassicPark.visitorsPerYear());
 // });
