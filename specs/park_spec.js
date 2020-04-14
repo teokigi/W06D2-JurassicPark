@@ -54,7 +54,8 @@ describe('Park', function() {
     assert.equal(250*365,jurassicPark.visitorsPerYear());
 });
 
-  it('010 - should be able to calculate total revenue for one year');
+  it('010 - should be able to calculate total revenue for one year',function(){
     assert.equal(250*365*100,jurassicPark.annualSales());
 });
+
 });

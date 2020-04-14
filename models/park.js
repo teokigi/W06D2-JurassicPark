@@ -57,7 +57,7 @@ Park.prototype.visitorsPerYear = function(){
 // Calculate the total revenue from ticket sales for one year
 Park.prototype.annualSales = function(){
 	const annualVisits = this.visitorsPerYear();
-	const salesTotal = annualVists*this.ticketPrice;
+	const salesTotal = annualVisits*this.ticketPrice;
 	return salesTotal;
 }
 module.exports = Park;
