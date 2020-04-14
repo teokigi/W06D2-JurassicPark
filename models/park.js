@@ -65,5 +65,32 @@ Park.prototype.removeSpecies = function(species){
 	const found = this.dinosaurs.filter(dino => dino.species != species);
 	this.dinosaurs = found;
 }
+// return summary of diet type and number of it in record.
+Park.prototype.summary = function(){
+	//look through current dinosaurs, if the diet category is new,
+	//make a new category.
+	//for each category, find object that has diet category and +1.
+	dietCategorys = [];
+	appenddiets = [];
+	summary = {};
+	function findDiets(dino){
+		if (!dietCategorys.includes(dino.diet)){
+				dietCategorys.push(dino.diet)
+		}
+	}
+//function counts diet.
+	function dietCount(diet){
+		let count = 0;
+		count = this.dinosaurs.filter(dino => dino.diet == diet).length;
+		return count;
+	}
+//finds different diet categories
+	this.dinosaurs.forEach(findDiets);
+//need to count the diets and assign to new array.
+	for (category of dietCategorys){
+		summary[category] = dietCount(category);
+	}
+	return summary
+}
 
 module.exports = Park;

@@ -67,6 +67,6 @@ describe('Park', function() {
     it('012 - Provide an object containing each of the diet types \
         and the number of dinosaurs in the park of that diet type\
         ',function(){
-        assert.equal({'carnivore': 2,'herbivore':1},jurassicPark.summary())
+        assert.deepStrictEqual({'carnivore':2,'herbivore':1},jurassicPark.summary())
 });
 });
